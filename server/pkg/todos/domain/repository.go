@@ -3,9 +3,10 @@ package domain
 import "github.com/google/uuid"
 
 type Todo struct {
-	ID        uuid.UUID
-	Title     string
-	Completed bool
+	ID          uuid.UUID `json:"id"`
+	Title       string    `json:"title"`
+	Description string    `json:"description"`
+	Completed   bool      `json:"completed"`
 }
 
 type TodoRepository interface {
